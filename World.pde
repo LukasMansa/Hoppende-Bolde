@@ -2,10 +2,10 @@ class World {
   float[] xBounds = {0, width};
   float[] yBounds = {0, height};
 
-  float g = 0.3;
-  float stdVel = 1;
+  float g = 0;
+  float stdVel = 2;
 
-  int BallCount = 3;
+  int BallCount = 4;
 
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
 

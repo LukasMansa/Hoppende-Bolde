@@ -10,16 +10,19 @@ class Ball extends WorldEntity
     pos.set(width/2, height/2);
     vel.set(0.5, -2);
     world = wrld;
-
+    
+    assignID();
     mass = sqrt(radius) * PI;
   }
-
+  
   Ball (float x, float y, PVector vel_, World wrld) { // default cunstructor
     pos.set(x, y);
     vel.set(0.5, -2);
     vel = vel_;
     world = wrld;
     mass = sqrt(radius) * PI;
+    
+    assignID();
   }
 
   void render () {
@@ -41,7 +44,7 @@ class Ball extends WorldEntity
     // ball collision
     for (WorldEntity e : world.entities) {
       println("collision", pos.dist(e.pos), radius);
-      if (pos.dist(e.pos) < radius + e.radius) {
+      if (pos.dist(e.pos) < radius + e.radius && ID != e.ID) {
         collide(e);
         println("ok");
       }
