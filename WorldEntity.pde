@@ -1,10 +1,37 @@
 class WorldEntity {
+  
+  
   PVector pos = new PVector();
   PVector vel = new PVector();
-
-
-  void render() {
-    println("reeeeeee");
+  
+  float radius = 5;
+  float mass;
+  int ID;
+  
+  void assignID (){
+    ID = WECount++;
+    
   }
-  void move(){}
+  
+  
+  void render() {
+  }
+  void move() {
+  }
+
+  void within() {
+  }
+
+
+  void collide(WorldEntity entity) {
+    vel = (getForce().sub(entity.getForce())).div(mass);
+  }
+  PVector getForce(){
+   return vel.mult(mass);
+  }
+  
+  void debug(){
+    println(vel.mag());
+  }
+  
 }

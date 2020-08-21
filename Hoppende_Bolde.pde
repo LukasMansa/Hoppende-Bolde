@@ -1,11 +1,14 @@
-
+int WECount = 0;
 World world;
 Ball b;
+
+
+float density = 1;
+
 
 void setup()
 {
   world = new World();
-  world.init();
   size(512, 512);
 }
 
