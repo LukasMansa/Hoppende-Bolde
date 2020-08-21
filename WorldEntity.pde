@@ -24,10 +24,12 @@ class WorldEntity {
 
 
   void collide(WorldEntity entity) {
-    vel = (getForce().sub(entity.getForce())).div(mass);
+    vel.x -= entity.vel.x;
+    vel.y -= entity.vel.y;
   }
-  PVector getForce(){
-   return vel.mult(mass);
+  PVector getKE(){
+    float mag = vel.mag();
+   return vel.normalize().mult((mag*mag));
   }
   
   void debug(){

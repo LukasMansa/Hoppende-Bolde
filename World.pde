@@ -3,9 +3,9 @@ class World {
   float[] yBounds = {0, height};
 
   float g = 0;
-  float stdVel = 2;
+  float stdVel = 4;
 
-  int BallCount = 4;
+  int BallCount = 10;
 
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
 
@@ -25,6 +25,9 @@ class World {
       ent.render();
       ent.move();
       ent.debug();
+      if (ent instanceof Ball ){
+        ((Ball)ent).collide();
+      }
     }
   }
 }
