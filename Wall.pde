@@ -9,6 +9,7 @@ class Wall extends WorldEntity{
   }
   void render(){
   fill(0);
+  strokeWeight(4);
   line(pos.x, pos.y, end.x, end.y);
   }
   

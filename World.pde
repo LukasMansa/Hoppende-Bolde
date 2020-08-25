@@ -3,9 +3,9 @@ class World {
   float[] yBounds = {0, height};
   float g = 0;
   float stdVel = 10;
-  PImage p;
+  PImage p = loadImage("billed.jpg");
 
-  int BallCount = 50;
+  int BallCount = 200;
 
 
   Wall[] walls ={ new Wall(0, 630, 180, 680), new Wall(180, 680, 320, 585), new Wall(320, 585, 460, 663), new Wall(460, 663, 620, 640), new Wall(620, 640, 750, 675), new Wall(750, 675, 1000, 400 )};
@@ -25,11 +25,8 @@ class World {
     }
   }
 
-
-
-
   void run() {
-    p = loadImage("billed.jpg");
+    
     image(p, 0, 0);
     {
       for (WorldEntity ent : entities) {
@@ -37,16 +34,6 @@ class World {
         ent.move();
         ent.debug();
       }
-
-  void run()
-  {
-    // insert background
-    for (WorldEntity ent : entities) {
-      ent.render();
-      ent.move();
-      ent.debug();
-      
-
     }
   }
 }
