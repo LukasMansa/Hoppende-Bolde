@@ -8,7 +8,7 @@ class World {
   int BallCount = 100;
   
   
-  Wall[] wall ={ new Wall(0, 70, 180, 20), new Wall(180, 20, 320, 115), new Wall(320, 115, 460, 27), new Wall(460, 27, 620, 60), new Wall(620, 60, 750, 25), new Wall(750, 25, width, 300 )};
+  Wall[] wall ={ new Wall(0, 930, 180, 980), new Wall(180, 980, 320, 885), new Wall(320, 885, 460, 963), new Wall(460, 963, 620, 940), new Wall(620, 940, 750, 975), new Wall(750, 975, width, 700 )};
 
 
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
