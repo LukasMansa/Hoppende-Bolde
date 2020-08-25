@@ -1,6 +1,5 @@
 int WECount = 0;
 World world;
-Ball b;
 
 
 float density = 1;
