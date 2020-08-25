@@ -27,6 +27,7 @@ class World {
 
 
 
+
   void run() {
     p = loadImage("billed.jpg");
     image(p, 0, 0);
@@ -36,6 +37,16 @@ class World {
         ent.move();
         ent.debug();
       }
+
+  void run()
+  {
+    // insert background
+    for (WorldEntity ent : entities) {
+      ent.render();
+      ent.move();
+      ent.debug();
+      
+
     }
   }
 }
