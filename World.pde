@@ -5,11 +5,11 @@ class World {
   float g = 0;
   float stdVel = 10;
 
-  int BallCount = 1;
+  int BallCount = 50;
   
   
-  Wall[] wall ={ new Wall(0, 930, 180, 980), new Wall(180, 980, 320, 885), new Wall(320, 885, 460, 963), new Wall(460, 963, 620, 940), new Wall(620, 940, 750, 975), new Wall(750, 975, width, 700 )};
-
+  Wall[] walls ={ new Wall(0, 630, 180, 680), new Wall(180, 680, 320, 585), new Wall(320, 585, 460, 663), new Wall(460, 663, 620, 640), new Wall(620, 640, 750, 675), new Wall(750, 675, 1000, 400 )};
+    
 
   
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
