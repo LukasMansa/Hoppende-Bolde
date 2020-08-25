@@ -27,6 +27,7 @@ class WorldEntity {
     vel.x -= entity.vel.x;
     vel.y -= entity.vel.y;
   }
+  
   PVector getKE() {
     float mag = vel.mag();
     return vel.normalize().mult((mag*mag));
