@@ -8,7 +8,7 @@ float density = 1;
 void setup()
 {
   world = new World();
-  size(1000, 700);
+  size(1000, 667);
 }
 
 
