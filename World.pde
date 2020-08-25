@@ -8,7 +8,6 @@ class World {
   int BallCount = 100;
   
   
-  float[] wallVals = {0,height};
   
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
 
