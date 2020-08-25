@@ -29,12 +29,12 @@ class Ball extends WorldEntity
     fill(clr);
     circle(pos.x, pos.y, size);
   }
-  
-  void collide(){
+
+  void collide() {
     // ball collision
     for (WorldEntity e : world.entities) {
       if (pos.dist(e.pos) < radius + e.radius && ID != e.ID) {
-
+        vel.mult(-1);
         println("collision", pos.dist(e.pos), radius);
         collide(e);
       }
@@ -52,7 +52,7 @@ class Ball extends WorldEntity
       vel.y *= -1;
     } 
 
-    
+
 
     pos.x += vel.x;
     pos.y += vel.y;

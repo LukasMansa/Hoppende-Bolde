@@ -25,7 +25,7 @@ class World {
       ent.render();
       ent.move();
       ent.debug();
-      if (ent instanceof Ball ){
+      if (ent instanceof Ball ) {
         ((Ball)ent).collide();
       }
     }
