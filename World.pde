@@ -29,6 +29,7 @@ class World {
 
   void run()
   {
+    // insert background
     for (WorldEntity ent : entities) {
       ent.render();
       ent.move();
