@@ -11,6 +11,7 @@ class Ball extends WorldEntity
     vel.set(0.5, -2);
     world = wrld;
 
+    assignID();
     mass = sqrt(radius) * PI;
   }
 
@@ -20,6 +21,7 @@ class Ball extends WorldEntity
     vel = vel_;
     world = wrld;
     mass = sqrt(radius) * PI;
+    assignID();
   }
 
   void render () {
@@ -41,7 +43,7 @@ class Ball extends WorldEntity
     // ball collision
     for (WorldEntity e : world.entities) {
       println("collision", pos.dist(e.pos), radius);
-      if (pos.dist(e.pos) < radius + e.radius) {
+      if (pos.dist(e.pos) < radius + e.radius && ID != e.ID) {
         collide(e);
         println("ok");
       }

@@ -27,7 +27,7 @@ class WorldEntity {
     vel = (getForce().sub(entity.getForce())).div(mass);
   }
   PVector getForce(){
-   return vel.mult(mass);
+   return vel.div(mass);
   }
   
   void debug(){
