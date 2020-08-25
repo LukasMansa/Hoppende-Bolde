@@ -4,7 +4,6 @@ class Ball extends WorldEntity
 
   float size = 35;
   color clr = #14BAAF;
-  float radius = 5;
 
   Ball (World wrld) { // default cunstructor
     pos.set(width/2, height/2);
@@ -12,7 +11,7 @@ class Ball extends WorldEntity
     world = wrld;
 
     assignID();
-    mass = sqrt(radius) * PI;
+    mass = sqrt(size) * PI;
   }
 
   Ball (float x, float y, PVector vel_, World wrld) { // default cunstructor
@@ -20,7 +19,7 @@ class Ball extends WorldEntity
     vel.set(0.5, -2);
     vel = vel_;
     world = wrld;
-    mass = sqrt(radius) * PI;
+    mass = sqrt(size) * PI;
 
     assignID();
   }
@@ -33,9 +32,9 @@ class Ball extends WorldEntity
   void collide() {
     // ball collision
     for (WorldEntity e : world.entities) {
-      if (pos.dist(e.pos) < radius + e.radius && ID != e.ID) {
+      if (pos.dist(e.pos) < size && ID != e.ID) {
         vel.mult(-1);
-        println("collision", pos.dist(e.pos), radius);
+        println("collision", pos.dist(e.pos), size);
         collide(e);
       }
     }
@@ -58,6 +57,6 @@ class Ball extends WorldEntity
     pos.y += vel.y;
 
     vel.y += world.g;
-    //vel.mult(0.995); // drag
+    vel.mult(0.998); // drag
   }
 }
