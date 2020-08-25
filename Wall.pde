@@ -7,6 +7,9 @@ class Wall extends WorldEntity{
     pos.set(x,y);
     end.set(bx,by);
   }
-  
+  void render(){
+  fill(0);
+  line(pos.x, pos.y, end.x, end.y);
+  }
   
 }

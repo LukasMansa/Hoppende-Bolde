@@ -36,6 +36,6 @@ class WorldEntity {
   }
 
   void debug() {
-    println(vel.mag());
+    //println(vel.mag());
   }
 }
