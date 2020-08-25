@@ -46,7 +46,7 @@ class Ball extends WorldEntity
     }
     // if dot is perpendicular to wall
     else { 
-      distance = abs((w.end.y - w.pos.y)*pos.x - (w.end.x - w.pos.x)*pos.y + (w.end.x*w.pos.y);
+      distance = abs((w.end.y - w.pos.y)*pos.x - (w.end.x - w.pos.x)*pos.y + (w.end.x*w.pos.y));
     }
   }
 
