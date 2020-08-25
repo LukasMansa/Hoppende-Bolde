@@ -1,12 +1,16 @@
 class World {
   float[] xBounds = {0, width};
   float[] yBounds = {0, height};
+  float g = 0;
+  float stdVel = 10;
 
-  float g = 1;
-  float stdVel = 2;
+  int BallCount = 50;
+  
+  
+  Wall[] walls ={ new Wall(0, 630, 180, 680), new Wall(180, 680, 320, 585), new Wall(320, 585, 460, 663), new Wall(460, 663, 620, 640), new Wall(620, 640, 750, 675), new Wall(750, 675, 1000, 400 )};
+    
 
-  int BallCount = 2;
-
+  
   ArrayList<WorldEntity> entities = new ArrayList<WorldEntity>();
 
   World () {
@@ -14,6 +18,9 @@ class World {
     entities = new ArrayList<WorldEntity>();
     for (int i = 0; i < BallCount; i++) {
       entities.add(new Ball(random(xBounds[0], xBounds[1]), random(yBounds[0], yBounds[1]), PVector.random2D().mult(stdVel), this));
+    }
+    for(Wall wall: walls){
+      entities.add(wall);
     }
   }
 
@@ -25,6 +32,7 @@ class World {
       ent.render();
       ent.move();
       ent.debug();
+      
     }
   }
 }
